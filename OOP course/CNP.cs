@@ -8,14 +8,8 @@ namespace OOP_course.CNP
 {
     public class CNP
     {
-        
-        private String cnpString;
 
-        public String MyProperty
-        {
-            get { return cnpString; }
-            set { cnpString = value; }
-        }
+        public String cnpString { get; set; }
 
         public CNP(string stringInput)
         {
@@ -28,6 +22,7 @@ namespace OOP_course.CNP
 
         public void Verificare()
         {
+            Console.WriteLine(String.Format("\n{0}", cnpString));
             if (GetLenght() != 13)
             {
                 Console.WriteLine("Lungime invalida");
