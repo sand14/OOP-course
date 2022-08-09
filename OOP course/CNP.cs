@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_course.CNP
+namespace OOP_course.CNPClass
 {
     public class CNP
     {
 
         public String cnpString { get; set; }
+        public bool isCorrect;
 
         public CNP(string stringInput)
         {
             cnpString = stringInput;
+        }
+        public CNP()
+        {
         }
 
 
@@ -22,7 +26,7 @@ namespace OOP_course.CNP
 
         public void Verificare()
         {
-            Console.WriteLine(String.Format("\n{0}", cnpString));
+            Console.WriteLine(String.Format("\n{0} - verificare:", cnpString));
             if (GetLenght() != 13)
             {
                 Console.WriteLine("Lungime invalida");
@@ -66,10 +70,12 @@ namespace OOP_course.CNP
             if (sum % 11 < 10 && sum % 11 == Aint[12])
             {
                 Console.WriteLine("CNP corect");
+                this.isCorrect = true;
             }
             else if (sum % 11 == 10 && Aint[12] == 1)
             {
                 Console.WriteLine("CNP corect");
+                this.isCorrect=true;
             }
             else
             {
