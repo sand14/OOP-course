@@ -20,7 +20,7 @@ namespace OOP_course.Person
             Address = address;
             cnp.cnpString = cnpstring;
         }
-
+        
         public void VerificareCNP()
         {
             cnp.Verificare();

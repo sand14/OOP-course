@@ -11,5 +11,13 @@ namespace OOP_course.Proba
         	public int a = 7, b = m * n + 1, c, d;
         	public char c1 = '@', c2;
         	public String s1 = "un sir", s2  = "un sir extins", s3;
+
+        public override String ToString()
+        {
+            base.ToString();
+                return "test";
+        }
+       
+
     }
 }
