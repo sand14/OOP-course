@@ -58,7 +58,7 @@ public class Test
         p1.c1 = 'd';Console.WriteLine(p1.c1);   
 
     }
-    public static bool TestEqual(Proba p2,Proba p3)
+    public static bool TestEqual(Proba p2,Proba p3)    //! Aici eroare
     {
         if (p2.a == p3.a && p2.b == p3.b && p2.c == p3.c && p2.d == p3.d && p2.c1 == p3.c1 && p2.c2 == p3.c2 && p2.s1 == p3.s1 && p2.s2 == p3.s2 && p2.s3 == p3.s3)
             return true;
