@@ -29,18 +29,13 @@ using System.Linq;
 Proba p1 = new();
 Proba p2= new();
 p1.d = 5;
-bool FieldsAreEqual(Proba p2 , Proba  p3){
-    if(p2.a == p3.a && p2.b == p3.b && p2.c == p3.c && p2.d == p3.d && p2.c1 == p3.c1 && p2.c2 == p3.c2 && p2.s1 == p3.s1 && p2.s2 == p3.s2 && p2.s3 == p3.s3)
-        return true;
-    return false;
-}
-Console.WriteLine(FieldsAreEqual(p1,p2));
 
 
 Person person1 = new Person("Name1", "Address", "5000314090046");
 person1.VerificareCNP();
 public class Test
 {
+    
     public static void Test1()
     {
         Proba p1 = new (),p2;
@@ -63,7 +58,10 @@ public class Test
         p1.c1 = 'd';Console.WriteLine(p1.c1);   
 
     }
-    public static void Test2()
+    public static bool TestEqual(Proba p2,Proba p3)
     {
+        if (p2.a == p3.a && p2.b == p3.b && p2.c == p3.c && p2.d == p3.d && p2.c1 == p3.c1 && p2.c2 == p3.c2 && p2.s1 == p3.s1 && p2.s2 == p3.s2 && p2.s3 == p3.s3)
+            return true;
+        return false;
     }
 }
