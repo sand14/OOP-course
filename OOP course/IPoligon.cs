@@ -1,18 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OOP_course
 {
-    internal abstract class Poligon
+    interface IPoligon
     {
-        private int nrLaturi;
-        public void AfisareNrLaturi()
-        {
-            Console.WriteLine($"Nr laturi: {nrLaturi}");
-        }
         public abstract double CalcularePerimetru();
         public abstract double CalculareArie();
     }

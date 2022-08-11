@@ -66,44 +66,56 @@ using OOP_course;
 //        return false;
 //    }
 //}
-CD2 deriv2= new(4,5,7,10);
+// CD2 deriv2= new(4,5,7,10);
 
-Console.WriteLine(deriv2.ToString());
-S1 s1 = new S1(1, 2, 3);
-S1 s2 = new S1(1, 2, 3);
-s1 = deriv2;
-s2 = deriv2;
-
-
+// Console.WriteLine(deriv2.ToString());
+// S1 s1 = new S1(1, 2, 3);
+// S1 s2 = new S1(1, 2, 3);
+// s1 = deriv2;
+// s2 = deriv2;
 
 
 
-if(s1 is CD2)
-{
-    CD2 s1modis=(CD2)s1; 
-}
-if (s2 is CD2)
-{
-    CD2 s2modis = (CD2)s2;
-}
-
-CD2 s1modas = s1 as CD2;
-CD2 s2modas = s2 as CD2;
-if(s1modas != null && s2modas != null)
-{
-    Console.WriteLine("Succes");
-}
 
 
-S1 s = new S1(1, 2, 3);
-CD2 cdvar = new CD2(1, 2, 3, 4);
-s = cdvar;
-((CD2)s).F6("stringindwadwadwa");
-int b = 3;
-Console.WriteLine("int: {0}", b);
+// if(s1 is CD2)
+// {
+//     CD2 s1modis=(CD2)s1; 
+// }
+// if (s2 is CD2)
+// {
+//     CD2 s2modis = (CD2)s2;
+// }
 
-class Rectangle{
-    public double Length { get; set; }
-    public double Width { get; set; }
-}
+// CD2 s1modas = s1 as CD2;
+// CD2 s2modas = s2 as CD2;
+// if(s1modas != null && s2modas != null)
+// {
+//     Console.WriteLine("Succes");
+// }
 
+
+// S1 s = new S1(1, 2, 3);
+// CD2 cdvar = new CD2(1, 2, 3, 4);
+// s = cdvar;
+// ((CD2)s).F6("stringindwadwadwa");
+// int b = 3;
+// Console.WriteLine("int: {0}", b);
+
+// class Rectangle{
+//     public double Length { get; set; }
+//     public double Width { get; set; }
+// }
+
+Triunghi triungi=new Triunghi(6,5,3);
+Patrat patrat = new Patrat (5);
+Console.WriteLine(patrat.ToString());
+Console.WriteLine();
+Console.WriteLine(triungi.ToString());
+
+IPoligon interfata1;
+IPoligon interfata2;
+interfata1=triungi;
+interfata2=patrat;
+
+Console.WriteLine(interfata1.ToString());

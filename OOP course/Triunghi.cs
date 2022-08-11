@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace OOP_course
 {
-    internal class Triunghi : Poligon
+    internal class Triunghi : Poligon,IPoligon
     {
         private double lungime1;
         private double lungime2;
         private double lungime3;
 
-        public override double CalcularePerimetru(int nrLaturi, double lungimeLatura)
+        private double arie;
+        private double semiperimetru;
+
+         public Triunghi(double input1,double input2,double input3)
         {
-            return nrLaturi * lungimeLatura;
+            lungime1=input1;
+            lungime2=input2;
+            lungime3=input3;
         }
-        public override double CalculareArie(int nrLaturi, double lungimeLatura)
+        public override double CalcularePerimetru()
         {
-            return nrLaturi * lungimeLatura;
+            return lungime1 + lungime2 + lungime3;
+        }
+        public override double CalculareArie()
+        {
+            semiperimetru = CalcularePerimetru()/2;
+            arie=Math.Sqrt(semiperimetru*(semiperimetru-lungime1)*(semiperimetru-lungime2)*(semiperimetru-lungime3));
+            return arie;
+        }
+        public override string ToString()
+        {
+            return "Triungi: \nNumar Laturi: 3\nLungime laturi: " + lungime1 + " " + lungime2 + " " + lungime3 + " " + "\nPerimetru: " + CalcularePerimetru() + "\nArie: " + CalculareArie() ;
         }
 
 
