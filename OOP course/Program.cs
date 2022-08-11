@@ -99,4 +99,11 @@ S1 s = new S1(1, 2, 3);
 CD2 cdvar = new CD2(1, 2, 3, 4);
 s = cdvar;
 ((CD2)s).F6("stringindwadwadwa");
+int b = 3;
+Console.WriteLine("int: {0}", b);
+
+class Rectangle{
+    public double Length { get; set; }
+    public double Width { get; set; }
+}
 
