@@ -8,6 +8,10 @@ namespace OOP_course
 {
     internal abstract class Poligon
     {
+        public Poligon(int nrLaturi)
+        {
+            this.nrLaturi=nrLaturi;
+        }
         private int nrLaturi;
         public void AfisareNrLaturi()
         {

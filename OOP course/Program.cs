@@ -1,6 +1,5 @@
 ﻿// // See https://aka.ms/new-console-template for more information
 using OOP_course.Proba;
-using OOP_course.Person;
 using OOP_course.CNPClass;
 using OOP_course.Cercuri;
 using OOP_course.PalindromRegulat;
@@ -107,15 +106,54 @@ using OOP_course;
 //     public double Width { get; set; }
 // }
 
-Triunghi triungi=new Triunghi(6,5,3);
-Patrat patrat = new Patrat (5);
-Console.WriteLine(patrat.ToString());
-Console.WriteLine();
-Console.WriteLine(triungi.ToString());
+// Triunghi triungi=new Triunghi(6,5,3);
+// Patrat patrat = new Patrat (5);
+// triungi.AfisareNrLaturi();
+// patrat.AfisareNrLaturi();
+// Console.WriteLine(patrat.ToString());
+// Console.WriteLine();
+// Console.WriteLine(triungi.ToString());
 
-IPoligon interfata1;
-IPoligon interfata2;
-interfata1=triungi;
-interfata2=patrat;
+// IPoligon interfata1;
+// IPoligon interfata2;
+// interfata1=triungi;
+// interfata2=patrat;
 
-Console.WriteLine(interfata1.ToString());
+// Console.WriteLine(interfata1.ToString());
+TestParam.Test();
+class Proba2 { public int a; }
+
+class TestParam
+{
+    // O metoda in care se modifica valorile propriilor parametri formali / 
+
+    static void ModParam(int k, Proba2 p1, Proba2 p2)
+    {
+        Console.WriteLine("La intrarea in ModParam:\n” +  k=" + k + " p1.a=" + p1.a + "p2.a=" + p2.a);
+        k = -111; // S-a modificat valoarea parametrului k de tip 
+        p1.a = -222; // S-a modificat valoarea unui camp al obiectului cu
+                     // referinta p1, dar nu insasi referinta p1 
+        p2 = new Proba2(); // S-a modificat insasi referinta p2, catre 
+                           // o noua instanta a clasei Proba2 
+        p2.a = -333; // S-a atribuit valoare campului a al noii 
+                     // instante referite prin p2 
+        Console.WriteLine("In ModParam dupa modificarile de parametri:\n" + "k=" + k +
+         " p1.a=" + p1.a + " p2.a=" + p2.a);
+    }
+
+    // Metoda principala 
+    public static void Test()
+    {
+        // Se declara si se initializeaza variabilele 
+        int m = 123;
+        Proba2 pr1 = new Proba2(), pr2 = new Proba2();
+        pr1.a = 333;
+        pr2.a = 444;
+        Console.WriteLine("In Main inainte de a invoca ModParam:\n" + "m=" + m + " pr1.a=" + pr1.a + " pr2.a = "+ pr2.a); 
+        // Se invoca metoda ModParam 
+        ModParam(m, pr1, pr2);
+        // Se afiseaza valorile parametrilor dupa revenirea din ModParam
+        Console.WriteLine("In Main dupa ce s-a invocat ModParam:\n" + "m=" + m + " pr1.a=" + pr1.a + " pr2.a=" + pr2.a);
+    }
+    
+}

@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using OOP_course.CNPClass;
 
-namespace OOP_course.Person
+namespace OOP_course
 {
     public class Person
     {
+        private string name;
+        private string address;
         public string Name { get; set; }
         public string Address { get; set; }
-        public string cnpstring;
-        public CNP cnp = new();
+        private CNP cnp = new();
 
         public Person(string name, string address, string cnpstring)
         {
@@ -20,7 +21,11 @@ namespace OOP_course.Person
             Address = address;
             cnp.cnpString = cnpstring;
         }
-        
+        public override string ToString()
+        {
+            string returnstring= String.Format("Name: {0}   Address: {1}  CNP: {2}", name, address, cnp.cnpString);
+            return returnstring;
+        }
         public void VerificareCNP()
         {
             cnp.Verificare();

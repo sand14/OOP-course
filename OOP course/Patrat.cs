@@ -7,10 +7,9 @@ namespace OOP_course
 {
     internal class Patrat : Poligon,IPoligon
     {
-        private int nrLaturi=4;
         private double lungimelatura;
 
-        public Patrat(double input)
+        public Patrat(double input, int nrlaturi = 4) : base(nrlaturi)
         {
             lungimelatura=input;
         }

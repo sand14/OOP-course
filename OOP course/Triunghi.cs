@@ -15,7 +15,7 @@ namespace OOP_course
         private double arie;
         private double semiperimetru;
 
-         public Triunghi(double input1,double input2,double input3)
+         public Triunghi(double input1,double input2,double input3,int nrlaturi=3) : base (nrlaturi)
         {
             lungime1=input1;
             lungime2=input2;
